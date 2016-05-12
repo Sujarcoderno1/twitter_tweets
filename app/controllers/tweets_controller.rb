@@ -1,5 +1,4 @@
 class TweetsController < ApplicationController
-require 'open-uri'
 
   def extract
     @url = params[:url]

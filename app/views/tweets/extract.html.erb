@@ -7,7 +7,7 @@
       </div>
       <div class='col-md-10'>
         <div class="stream-item-header">
-          <a class="user-profile">
+          <a class="user-profile" href="<%= 'https://twitter.com' + tweet.search('.stream-item-header').search('.js-user-profile-link').first.attributes['href'].value %>" target='_blank'>
             <strong class="fullname"><%= tweet.search('.stream-item-header').search('.fullname').first.children.first.text %></strong>
           </a>
           <span>&rlm;</span>

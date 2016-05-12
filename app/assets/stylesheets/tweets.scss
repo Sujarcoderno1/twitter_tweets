@@ -1,0 +1,52 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+input.search-query {
+  padding-left: 30px;
+  height: 40px;
+}
+
+form {
+  position: relative;
+}
+
+form:before {
+    content: '';
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-image: url(http://getbootstrap.com/2.3.2/assets/img/glyphicons-halflings.png);
+    background-position: -48px 0;
+    position: absolute;
+    top: 14px;
+    left: 10px;
+    opacity: .5;
+    z-index: 1000;
+}
+
+.tweet-img {
+  padding-top: 10px;
+}
+
+.tweet-img img {
+  width: 100%;
+  top: -84px;
+}
+
+.row {
+  border: 1px solid;
+  padding: 15px;
+  border-color: cadetblue;
+  border-bottom-style: dotted;
+  border-bottom-color: aliceblue;
+}
+
+.header.container-fluid {
+  padding: 0;
+}
+
+.navbar-right a {
+  margin-right: 30px;
+  font-size: large;
+}

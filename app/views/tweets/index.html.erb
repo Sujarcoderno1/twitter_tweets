@@ -1,0 +1,13 @@
+<div class='text-center'>
+  <br>
+  <br>
+  <h2>Fetch/extract all tweets information from twitter url! </h2>
+  <br>
+  <br>
+  <div class='col-md-3'></div>
+  <div class='search-data col-md-6'>
+    <%= form_tag extract_path, method: :post do |f| %>
+      <%= text_field_tag :url,'', placeholder: 'Enter Twitter url to fetch tweets...', class: 'form-control search-query' %>
+    <%end%>
+  </div>
+</div>

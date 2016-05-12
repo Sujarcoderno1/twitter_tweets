@@ -1,0 +1,35 @@
+<div class='col-md-2'></div>
+<div class='col-md-8'>
+  <%= @tweets.each do |tweet| %>
+    <div class='row'>
+      <div class='col-md-2'>
+        <%= image_tag( tweet.search('.stream-item-header').search('.avatar').first.attributes['src'].value ) %>
+      </div>
+      <div class='col-md-10'>
+        <div class="stream-item-header">
+          <a class="user-profile">
+            <strong class="fullname"><%= tweet.search('.stream-item-header').search('.fullname').first.children.first.text %></strong>
+          </a>
+          <span>&rlm;</span>
+          <span class="username"><s>@</s>
+            <b><%= tweet.search('.stream-item-header').search('.username').first.children.last.children.text %></b>
+          </span>
+          <small class="time">
+            <span class="timestamp">
+              <%= tweet.search('.stream-item-header').search('.tweet-timestamp').first.attributes['title'].value %>
+            </span>
+          </small>
+        </div>
+        <div class='tweet-content'>
+          <div class='text'>
+            <%= tweet.search('.js-tweet-text-container').search('p').children.first.text %>
+          </div>
+          <div class='tweet-img'>
+            <%= image_tag( tweet.search('.AdaptiveMedia').search('img').first.attributes['src'].value ) unless tweet.search('.AdaptiveMedia').search('img').first.nil? %>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+<div class='col-md-3'></div>

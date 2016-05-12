@@ -27,6 +27,8 @@ gem 'paperclip'
 gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 gem 'bootstrap-sass', '~> 3.3.6'
 
+gem 'rails_12factor', group: :production
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
